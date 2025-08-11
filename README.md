@@ -19,13 +19,17 @@
 ```mermaid
 graph TD
     subgraph ブラウザ
-        A[React SPA\n(Vite + TypeScript)]
+        A1[React SPA]
+        A2[(Vite + TypeScript)]
     end
     subgraph ローカル開発環境
-        B[Mock API\n(Express + TypeScript)]
+        B1[Mock API]
+        B2[(Express + TypeScript)]
     end
-    A -->|HTTP GET /quizzes| B
-    A -->|HTTP GET /quizzes/:id/answer| B
+    A1 --> A2
+    B1 --> B2
+    A1 -->|HTTP GET /quizzes| B1
+    A1 -->|HTTP GET /quizzes/:id/answer| B1
 ```
 
 > 将来的には、このMock API部分を **AWS API Gateway + Lambda + DynamoDB** に置き換えることで、サーバーレス構成に移行可能です。
