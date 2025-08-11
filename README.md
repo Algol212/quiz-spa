@@ -19,10 +19,10 @@
 ```mermaid
 graph TD
     subgraph ブラウザ
-        A[React SPA<br>(Vite + TypeScript)]
+        A[React SPA\n(Vite + TypeScript)]
     end
     subgraph ローカル開発環境
-        B[Mock API<br>(Express + TypeScript)]
+        B[Mock API\n(Express + TypeScript)]
     end
     A -->|HTTP GET /quizzes| B
     A -->|HTTP GET /quizzes/:id/answer| B
